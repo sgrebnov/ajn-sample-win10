@@ -69,5 +69,10 @@ namespace AllJoyn.Lamp.Sample.App
             var value = Convert.ToUInt32(UInt32.MaxValue * (e.NewValue / 100.0));
             await _lampState.SetSaturationAsync(value);
         }
+
+        private async void PowerSwitch_Toggled(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            await _lampState.SetOnOffAsync(PowerSwitch.IsOn);
+        }
     }
 }

@@ -12,21 +12,27 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="45" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="65" />
             <RowDefinition Height="65" />
             <RowDefinition Height="65" />
             <RowDefinition Height="65" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" FontSize="20" Text="AllJoyn Windows10 Lamp Sample"/>
         
-        <TextBlock Grid.Row="1" FontSize="16" Text="Brightness/Яркость" />
-        <Slider Grid.Row="1" x:Name="Brightness" HorizontalAlignment="Left" Margin="0,10,0,0" Width="350" ValueChanged="Brightness_ValueChanged"  VerticalAlignment="Top" Maximum="100"/>
+        <TextBlock Grid.Row="2" FontSize="16" Text="Brightness/Яркость" />
+        <Slider Grid.Row="2" x:Name="Brightness" HorizontalAlignment="Left" Margin="0,20,0,0" Width="350" ValueChanged="Brightness_ValueChanged"  VerticalAlignment="Top" Maximum="100"/>
 
-        <TextBlock Grid.Row="2" FontSize="16" Text="Hue/Оттенок" />
-        <Slider Grid.Row="2" x:Name="Hue" HorizontalAlignment="Left" Margin="0,10,0,0" ValueChanged="Hue_ValueChanged"  VerticalAlignment="Top" Width="350" Maximum="360"/>
+        <TextBlock Grid.Row="3" FontSize="16" Text="Hue/Оттенок" />
+        <Slider Grid.Row="3" x:Name="Hue" HorizontalAlignment="Left" Margin="0,20,0,0" ValueChanged="Hue_ValueChanged"  VerticalAlignment="Top" Width="350" Maximum="360"/>
 
-        <TextBlock Grid.Row="3" FontSize="16" Text="Saturation/Насыщенность" />
-        <Slider Grid.Row="3" x:Name="Saturation" HorizontalAlignment="Left" Margin="0,10,0,0" ValueChanged="Saturation_ValueChanged"  VerticalAlignment="Top" Width="350" Maximum="100"/>
+        <TextBlock Grid.Row="4" FontSize="16" Text="Saturation/Насыщенность" />
+        <Slider Grid.Row="4" x:Name="Saturation" HorizontalAlignment="Left" Margin="0,20,0,0" ValueChanged="Saturation_ValueChanged"  VerticalAlignment="Top" Width="350" Maximum="100"/>
 
+        <TextBlock Grid.Row="1" FontSize="16" Text="Power" Margin="0,22,0,43" Grid.RowSpan="2" />
+        <ToggleSwitch Grid.Row="1" x:Name="PowerSwitch" 
+              OnContent="On" OffContent="Off" 
+              Toggled="PowerSwitch_Toggled" Margin="60,13,0,12"/>
+        
     </Grid>
 </Page>

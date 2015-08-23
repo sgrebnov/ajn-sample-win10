@@ -1,5 +1,8 @@
 /.vs/
-/Debug/
+/**/Debug/
+/**/Debug/
+/**/obj/
+/**/bin/
 /ipch/
 /packages/
 *.sdf
